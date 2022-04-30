@@ -1,0 +1,37 @@
+
+Recap:
+  DOM
+  JS in html
+ 
+  getElementById, getElementsByClassName
+  querySelector, querySelectorAll
+
+  createElement
+  setAttribute --> eg: id or class
+  innerHtml, innerText
+  appendChild, append
+  
+
+Topics:
+  
+  classlist ---> used to add multiple classes to an element
+  document.body ---> direct access to the body element
+  
+  returnType
+    append - return undefined
+    appendChild - returns appended child
+
+  Use cases of DOM manipulation
+  bootstrap design using DOM
+    simple div using DOM (Container, Row, Div)
+    Bootstrap button
+    Table - Create sample Bootstrap table using DOM
+
+  alert ---> to alert about something
+  prompt ---> to get an input value from user
+  confirm ---> to get confirmation about something
+
+  introduction to event hanling
+    execution of certian statements during an event
+  Click DOM creation
+    create new DOM element during an event
