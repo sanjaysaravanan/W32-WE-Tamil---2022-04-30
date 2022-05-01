@@ -1,37 +1,31 @@
 
-Recap:
-  DOM
-  JS in html
- 
-  getElementById, getElementsByClassName
-  querySelector, querySelectorAll
 
-  createElement
-  setAttribute --> eg: id or class
-  innerHtml, innerText
-  appendChild, append
+Topics: ES5 vs ES6 ---> Features Of ES6
+
+  Var - ES5 - Scoped to the nearest function block
+  Let, Const - ES6 Sope to the enclosing block
+
+  Object, Anonymous Functions
+
+  Template Literals
+
+  Accessing Objs Values
+
+  This interms of Object and window
+  function ---> Constructable and Callable
+  arrow function ---> Only callable
+
+
+  map ---> Iterates and returns a new array with the return value in each iteration, 
+  foreach ---> Iterates and executes the statements 
+  filter ---> Filters and create a new array with all the true return values
+
+  reference of array of objects & values
+
+  Object/Array Destructuring
+
+  Rest/Spread
+
+  reduce ---> Accumulation of the prev val and currVal
+
   
-
-Topics:
-  
-  classlist ---> used to add multiple classes to an element
-  document.body ---> direct access to the body element
-  
-  returnType
-    append - return undefined
-    appendChild - returns appended child
-
-  Use cases of DOM manipulation
-  bootstrap design using DOM
-    simple div using DOM (Container, Row, Div)
-    Bootstrap button
-    Table - Create sample Bootstrap table using DOM
-
-  alert ---> to alert about something
-  prompt ---> to get an input value from user
-  confirm ---> to get confirmation about something
-
-  introduction to event hanling
-    execution of certian statements during an event
-  Click DOM creation
-    create new DOM element during an event

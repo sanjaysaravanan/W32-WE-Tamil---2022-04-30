@@ -1,188 +1,233 @@
-{/* 
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        Sample Content
-      </div>
-    </div>
-  </div> 
-*/}
+// Let Var, Const
+function SampleVar() {
+  var x = 5;
+  if(x % 2 === 1) {
+    var x = 100;
+  }
+  console.log(x);
+}
 
-// const colDiv = document.createElement('div');
-// colDiv.setAttribute('class', 'col');
-// colDiv.innerText = "Sample Content"
+function SampleLet() {
+  const x = 5;
+  if(x % 2 === 1) {
+    x = 100;
+  }
+  console.log(x);
+}
 
-// const rowDiv = document.createElement('div');
-// rowDiv.setAttribute('class', 'row');
+// Normal Func
+function SampleVar() {
 
-// rowDiv.append(colDiv);
+}
 
-// const containerDiv = document.createElement('div');
-// containerDiv.classList.add('container');
-
-// containerDiv.append(rowDiv);
-
-// document.body.append(containerDiv);
+const FUNCArr = () => {
+  return true;
+}
 
 
-// <button type="button" class="btn btn-primary">Primary</button>
+// IIFE
+const func = function () {
+ return "Something";
+} ();
 
-// const btnElement = document.createElement('button');
-// btnElement.setAttribute('type', 'button');
-// btnElement.classList.add('btn', 'btn-primary');
-// btnElement.setAttribute('class', 'btn btn-primary');
-// btnElement.innerText = 'Primary';
-// document.body.append(btnElement);
+// console.log(func);
 
 
 
-{/* 
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-    </tbody>
-  </table> 
-*/}
-
-
-
-{/* <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
-      </tr>
-    </thead> */}
-
-// const customCreateElement = (tagName, value) => {
-//   const element = document.createElement(tagName);
-//   element.innerText = value;
-//   return element;
+// const person = {
+//   id: '21',
+//   sleep: function () {
+//     console.log("Sleeping");
+//   },
+//   talk() {
+//     console.log("Talking");
+//   },
+//   role: 'Developer',
+//   age: 50,
+//   display: function () {
+//     console.log(this);
+//   }
 // }
+// person.display();
+// // const customDisplay = person.display;
 
-// const headers = ['#', 'First', 'Last', 'Handle'];
+// // const newCustomDisplay = person.display.bind(person);
 
-// Header tr
-// const trHead = document.createElement('tr');
-
-// th codes
-// headers.forEach((val) => {
-//   const thElement = customCreateElement('th', val);
-//   thElement.setAttribute('scope', 'col');
-//   trHead.append(thElement);
-// });
-
-// thead codes
-// const tHead = document.createElement('thead');
-// tHead.append(trHead);
-
-{/* <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-    </tbody> */}
-// const rows = [
-//   { id: 1, firstName: 'Mark', lastName: 'Otto', handle: '@mdo' },
-//   { id: 2, firstName: 'Jacob', lastName: 'Thornton', handle: '@fat' }
-// ];
-// tbody
-// const tbodyElement = document.createElement('tbody');
-
-// body tr, th
-// rows.forEach((personObj) => {
-//   const idTh = customCreateElement('th', personObj.id);
-//   idTh.setAttribute('scope', 'row');
-
-//   const firstNameTd = customCreateElement('td', personObj.firstName);
-
-//   const lastNameTd = customCreateElement('td', personObj.lastName);
-
-//   const handleTd = customCreateElement('td', personObj.handle);
-
-//   const trElement = document.createElement('tr');
-//   trElement.append(idTh, firstNameTd, lastNameTd, handleTd);
-
-//   tbodyElement.append(trElement);
-// });
-
-// const tableElement = document.createElement('table');
-// tableElement.setAttribute('class', 'table')
-// tableElement.append(tHead, tbodyElement);
-// document.body.append(tableElement);
+// // customDisplay();
+// // newCustomDisplay();
 
 
-// Alert
-// alert("Hello There I am Alert");
+function Sample (a, b) {
 
-// Prompt 
-// const promptVal = prompt('enter password');
-// console.log(promptVal);
+  this.a = a;
+  this.b = b;
 
-// const confirmVal = window.confirm("Are You an adult?");
-// console.log(confirmVal);
+  return a + b;
+}
 
+const NewObj = new Sample(5, 10);
 
-// Event
-{/* <button type="button" class="btn btn-primary" onclick="console.log('sanjay')">Primary</button> */}
+// console.log(NewObj);
 
-const btnElement = document.createElement('button');
-btnElement.setAttribute('type', 'button');
-btnElement.classList.add('btn', 'btn-primary');
-btnElement.innerText = 'Click Me';
+// console.log(Sample(5, 10));
 
-const clickFunc = () => {
-  const h1Element = document.createElement('h1');
-  h1Element.innerText = "This is a H1 element";
-  document.body.append(h1Element);
-};
+const SampleFunc = (a, b) => {
+  console.log(this);
+  return a + b;
+}
 
-// Event listeners
-btnElement.addEventListener('click', clickFunc);
+// console.log(SampleFunc(5, 10));
 
-document.body.append(btnElement);
+// const ArrFunc = new SampleFunc(5, 10);
 
 
-const divElement = document.createElement('div');
+// filter, map, foreach, reduce
 
-divElement.innerHTML = "<h1>Sanjay</h1>";
-divElement.style.margin = '16px';
-divElement.style.border = '2px solid';
 
-divElement.addEventListener('mouseover', () => {
-  divElement.style.backgroundColor = 'blue';
-})
+const Elements = [
+  {
+    id: 1,
+    isActive: true,
+    age: 23,
+  },
+  {
+    id: 2,
+    isActive: false,
+    age: 32,
+  },
+  {
+    id: 3,
+    isActive: true,
+    age: 28,
+  }
+];
 
-divElement.addEventListener('mouseleave', () => {
-  divElement.style.backgroundColor = 'black';
+// Filter all active users
+const ActiveElements = Elements.filter(({ isActive }) => isActive );
+// console.log(ActiveElements);
+
+
+// Filter all user whose age is less than 30
+const OldEles = Elements.filter(({ age }) => age);
+// console.log(OldEles);
+
+
+function SomeFunc(ele, i) {
+
+}
+
+// Map ---> Return new array with each returned elements
+const NewElements = Elements.map((ele, z, x) => {
+  // console.log(z);
+  // console.log(x);
+  return ele.id;
 });
 
-document.body.append(divElement);
+// console.log(NewElements);
+
+// Foreach ---> Just executes a set of statement return type: undefined
+const NewElementsTwo = Elements.forEach(({ id }, i, x) => {
+  // console.log(z);
+  // console.log(x);
+  return id;
+});
+
+// console.log(NewElementsTwo);
 
 
-const val = prompt("Enter Val");
-const spanEle = document.createElement('span');
-spanEle.innerText = val
-document.body.append(spanEle);
+// const ar1 = 1;
+
+// const arr = [1, 2, 3, 4, 5];
+// arr[0] = 20;
+// console.log(arr)
+
+
+// const obj = {
+//   id: 1,
+//   name: "Sanjay"
+// }
+// obj.name = "Saravanan";
+// console.log(obj);
+
+
+// const funcSome = (arrs) => { // ([1, 2, 3, 4, 5])
+//   arrs[3] = 999;
+//   console.log("Arrs", arrs)
+// }
+
+// const funcObj = (objs) => {
+//   objs.name = "Sammy";
+//   console.log(objs);
+// }
+
+// funcSome([...arr]);
+// funcObj({...obj});
+
+// console.log(arr);
+// console.log(obj);
+
+
+const person = {
+  id: '21',
+  sleep: function () {
+    console.log("Sleeping");
+  },
+  talk() {
+    console.log("Talking");
+  },
+  role: 'Developer',
+  age: 50,
+  display: function () {
+    console.log(this);
+  },
+  bio: {
+    edu: "BE",
+    score: 70,
+    id: '24',
+    age: 25,
+  },
+  scores: [
+    {
+      id: 1,
+      sub: "Maths",
+      score: 99,
+    },
+    {
+      id: 2,
+      sub: "Eng",
+      score: 63,
+    }
+  ],
+}
+
+const arr = [1, 2, 3, 4];
+const newArr = [  4, 5, 6, 7, 8, 9, ...arr, ];
+// console.log(newArr);
+
+const newObj = { ...person, role: "Teacher", hobbies: ['cricket', 'movies'] };
+// console.log(newObj);
+
+
+// const [ a, d, z, ...x ] = arr;
+
+// console.log(a, d, x);
+
+// const { role, ...remainProps } = person;
+
+// console.log(role, remainProps);
+
+
+// Sum of All Elements in arr accu = 5, currVal = 1
+const sumArr = arr.reduce((accu, currVal) => {
+  console.log("Accu", accu);
+  console.log("Curr", currVal);
+  return accu + currVal;
+}, 5);
+
+
+console.log(sumArr);
+
+
+
+
+
